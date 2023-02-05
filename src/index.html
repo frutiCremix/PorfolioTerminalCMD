@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio terminal</title>
+  <script src="script.js" type="text/javascript" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/output.css">
+</head>
+    <body class="bg-gray-400 flex justify-center items-center h-sreen w-full">
+        <main style="min-height: 300px;" class="w-1/2 border-blue-500 border-2 m-2">
+            <div class="bg-gray-50 flex flex-row justify-between">
+                <div>
+                 C:\WINDOWS\system32\cmd.exe Porforlio Sebastian Oliveto
+                </div>
+                <div class="flex justify-center items-center">
+                    <span class="px-2 border-gray-500 border-2">-</span><span class="px-2 border-gray-500 border-2">[]</span><span class="px-2 border-gray-500 border-2">X</span>
+                </div>
+            </div>
+            <div style="min-height: 300px;" class="bg-black text-white" id="terminalWindow" >
+              <section id="terminal">
+                <div>Successful login - <span id="date"></span></div>
+                <div>Mi Portfolio</div>
+                Hola! Bienvenidos a mi portfolio, para ver la lista de commandos ingresá --> <span class="text-green-500">help</span>
+              </section>
+              <div>
+                <span>-</span> <span class="text-green-500" >gestuser</span> <input class="bg-black border-none focus:outline-none" id="promtInput"/>
+              </div> 
+            </div>
+        </main>
+          <div class="hidden" id="promptClone">
+            <span>-</span> <span class="text-green-500">gestuser</span> <span class="promtCloneInput"></span>
+            <div class="promtCloneContent"></div>
+          </div>
+
+          <div class="hidden" id="help">
+            <div>Comandos disponibles: </div>
+            <div>
+              <div>
+                <span class="command text-green-500">about</span>:
+                <div>"Sobre mi"</div> 
+              </div>
+              <div>
+                <span class="command text-green-500">social</span>:
+                <div >"Listado de mis redes sociales"</div> 
+              </div>
+              <div>
+                <span class="command text-green-500">skills</span>:
+                <div >"Las herramientas con las que trabajo"</div> 
+              </div>
+              <div>
+                <span class="command text-green-500">education</span>:
+                <div >"Todo sobre mi formación"</div> 
+              </div>
+              <div>
+                <span class="command text-green-500">experience</span>:
+                <div >"Donde trabajé hasta ahora"</div> 
+              </div>
+              <div>
+                <span class="command text-green-500">projects</span>:
+                <div >"Un listado de mis proyectos"</div> 
+              </div>
+              <div>
+                <span class="command text-green-500">clear</span>:
+                <div>"Borrar el historial de la terminal"</div> 
+              </div>
+            </div>
+          </div>
+      
+          <div class="hidden" id="projects">
+            <div>Proyectos: </div>
+            <div>
+              <span>Proyecto 1 </span> - <a href="https://github.com/user/proyecto" target="_blank"><span class="text-green-500">Link a github</span> </a>
+            </div>
+            <div>
+              <span >Proyecto 2 </span> - <a href="https://github.com/user/proyecto" target="_blank"><span class="text-green-500">Link a github</span> </a>
+            </div>
+            <div>
+              <span>Proyecto 3 </span> - <a href="https://github.com/user/proyecto" target="_blank"><span class="text-green-500">Link a github</span> </a>
+            </div>
+          </div>
+      
+          <div class="hidden" id="skills">
+            <div>Skills: </div>
+            <div>
+              <div>
+                <span>Programacion</span>:
+                <div>"
+                  <span class="text-yellow-200">javascript</span>
+                  <span class="text-cyan-300">CSS TailwindCss</span>
+                  <span class="text-red-300">HTML</span>
+                  
+                  <span class="text-green-400">NodeJs Express NPM</span>
+                  <span class="text-red-500">GIT</span>
+                </div> 
+              </div>
+              <div>
+                <span>Idiomas</span>:
+                <div>
+                  <span>Español</span>
+                  <span>Ingles</span>
+                </div> 
+              </div>
+            </div>
+          </div>
+      
+          <div class="hidden" id="about">
+                <div>
+                    Sobre mi:
+                </div>
+                <div>
+                    Hola! mi nombre es <span>Sebastian Oliveto</span>
+                    Me apasiona la programación y hacer que las cosas funcionen. Busco desarrollar mi carrera como web developer.    
+                </div> 
+            </div>
+      
+          <div class="hidden" id="experience">
+            Soy miembro/investigador del proyecto simulador ferroviario de la Universidad,
+            del cual ademas de desarrollar funcionalidades donde he tenido la oportunidad 
+            de trabajar en equipo y aplicar mis habilidades en un ambiente de proyecto real,
+            tabien estoy a cargo del diseño y desarrollo de la web del mismo. 
+             Nuestro equipo ha tenido el privilegio de ganar un premio otorgado
+            en el Concurso Nacional de Innovaciones(Tecnopolis), lo cual es un gran logro 
+            para mi y un testimonio de mi dedicacion al aprendizaje y al desarrollo de habilidades.
+          </div>
+      
+          <div class="hidden" id="social">
+            <div>Redes sociales: </div>
+            <div>
+              <span>Github</span> - <span><a href="https://github.com/frutiCremix"target="_blank">https://github.com/frutiCremix</a></span>
+            </div>
+            <div>
+              <span>LinkedIn</span> - <span><a href="https://www.linkedin.com/in/sebastianoliveto/" target="_blank">https://linkedin.com/in/sebastianoliveto/</a></span>
+            </div>
+          </div>
+      
+        <div class="hidden" id="education">
+            <div>Formación: </div>
+            <div>
+              <span>Lic en Sistemas de Informacion- UNLa</span> <span>2do año</span>
+            </div>
+            <div>
+                <span>Curso FreeCodeCamp- Nodejs Express</span> <span>En progreso</span>
+            </div>
+            <div>
+                <span>Curso FreeCodeCamp- React</span> <span>Finalizado 2022</span>
+            </div>
+            <div>
+                <span>Curso FreeCodeCamp- javascript y Estructura de datos</span> <span>Finalizado 2021</span>
+            </div>
+            <div> 
+              <span>Curso FreeCodeCamp- Front End</span> <span>Finalizado 2021</span>
+            </div>
+            <div>
+                <span>Curso FreeCodeCamp- Responsive Design</span> <span>Finalizado 2021</span>
+            </div>
+          </div>
+    </body>
+</html>
