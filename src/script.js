@@ -2,6 +2,10 @@ const promtInput = document.getElementById('promtInput');
 const terminal = document.getElementById('terminal');
 const terminalWindow = document.getElementById('terminalWindow');
 const date = document.getElementById('date');
+
+const ventana=document.querySelector(".ventana");
+const msDos=document.querySelector(".msDos");
+const cerrarVentana=document.querySelector(".cerrarVentana");
 //ponemos el focus desde el comienzo y agregamos un evenclick para la ventana
 promtInput.focus();
 date.innerText = new Date().toDateString();
@@ -13,6 +17,17 @@ promtInput.addEventListener('keydown', (event) => {
     enterCommand(event);
   }
 })
+
+msDos.addEventListener("dblclick",()=>{
+  ventana.classList.remove("hidden");
+  terminal.innerHTML=`<div>Successful login - <span id="date"></span></div>
+  <div>Mi Portfolio</div>
+  Hola! Bienvenidos a mi portfolio, para ver la lista de commandos ingresá --> <span class="text-green-500">help</span>`;
+
+});
+cerrarVentana.addEventListener("click",()=>{
+  ventana.classList.add("hidden");
+});
 
 const enterCommand = (event) => {
   const promtElement = document.getElementById('promptClone').cloneNode(true);
@@ -61,7 +76,7 @@ const clearCommand = () => {
 
 const notFoundCommand = (command) => {
   const element = document.createElement('span');
-  element.innerText = `- ${command}: command not found`;
+  element.innerText = `C:\> ${command}: command not found`;
   element.style.color="red";
   return element;
 }
