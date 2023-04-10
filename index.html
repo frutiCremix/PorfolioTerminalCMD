@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./dist/output.css">
 </head>
-    <body class=" bg-teal-300 flex flex-col justify-center items-center">
+    <body class=" bg-teal-300 flex flex-col justify-between items-center h-screen">
       <div class="iconos">
         <div class=" w-6 h-6 ">
           <img class="msDos cursor-pointer" src="./src/imagenes/ms-dos.png" alt="">
@@ -48,8 +48,32 @@
               </div> 
             </div>
       </main>
-      
-     
+
+      <footer class="w-full h-10 bg-gray-200 flex justify-between items-center p-1">
+        
+          <button class="btnInicio border border-gray-400 h-full w-20">Inicio</button>
+          <div class="border border-gray-400 h-full w-40 flex justify-center items-center">Fecha y Hora</div>
+        
+      </footer>
+      <div class="menuDesplegable hidden absolute -z-10 w-40 h-full left-0 items-end">
+        <div class="bg-gray-200 h-1/2 w-full flex flex-row mb-10">
+          <div class="bg-blue-600 w-1/4 ">
+            <ul class="text-white font-bold h-full mt-10">           
+              <li class="-rotate-90">8</li>
+              <li class="-rotate-90">9</li>  
+              <li class="-rotate-90">w</li>
+              <li class="-rotate-90">o</li>
+              <li class="-rotate-90">d</li>
+              <li class="-rotate-90">n</li>
+              <li class="-rotate-90">i</li>
+              <li class="-rotate-90">w</li>
+            </ul>
+          </div>
+          <div class="flex justify-end items-end w-full">
+              <button class="text-left bg-gray-200 w-full">Apagar</button>
+          </div>
+        </div>
+      </div>
         
       <div class="hidden" id="promptClone">
             <span>C:\></span> <span class="text-green-500">user</span> <span class="promtCloneInput"></span>
@@ -178,12 +202,14 @@
                 <span>Curso FreeCodeCamp- Responsive Design</span> <span>Finalizado 2021</span>
             </div>
       </div>
-      <section class=" hidden" id="reset">
+      <section class="hidden" id="reset">
         <div>Successful login - <span id="date"></span></div>
         <div>Mi Portfolio</div>
         Hola! Bienvenidos a mi portfolio, para ver la lista de commandos ingresá --> <span class="text-green-500">help</span>
       </section>
       
+      <script src="./src/enventoMenu.js"></script>
+     
         
     </body>
 </html>
