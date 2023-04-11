@@ -521,12 +521,12 @@ video {
   left: 0px;
 }
 
-.top-0 {
-  top: 0px;
-}
-
 .-z-10 {
   z-index: -10;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .m-2 {
@@ -537,28 +537,8 @@ video {
   margin-bottom: 2.5rem;
 }
 
-.mb-11 {
-  margin-bottom: 2.75rem;
-}
-
-.-mb-10 {
-  margin-bottom: -2.5rem;
-}
-
 .mt-10 {
   margin-top: 2.5rem;
-}
-
-.mt-7 {
-  margin-top: 1.75rem;
-}
-
-.block {
-  display: block;
-}
-
-.inline {
-  display: inline;
 }
 
 .flex {
@@ -597,21 +577,20 @@ video {
   height: 50%;
 }
 
-.h-12 {
-  height: 3rem;
+.h-\[calc\(100\%_-_10rem\)\] {
+  height: calc(100% - 10rem);
+}
+
+.h-40 {
+  height: 10rem;
+}
+
+.h-24 {
+  height: 6rem;
 }
 
 .h-14 {
   height: 3.5rem;
-}
-
-.h-8 {
-  height: 2rem;
-}
-
-.min-h-min {
-  min-height: -moz-min-content;
-  min-height: min-content;
 }
 
 .w-6 {
@@ -638,48 +617,20 @@ video {
   width: 10rem;
 }
 
-.w-24 {
-  width: 6rem;
-}
-
-.w-8 {
-  width: 2rem;
+.w-1\/4 {
+  width: 25%;
 }
 
 .w-10 {
   width: 2.5rem;
 }
 
-.w-12 {
-  width: 3rem;
-}
-
-.w-48 {
-  width: 12rem;
-}
-
 .w-14 {
   width: 3.5rem;
 }
 
-.w-16 {
-  width: 4rem;
-}
-
-.w-2\/6 {
-  width: 33.333333%;
-}
-
-.w-64 {
-  width: 16rem;
-}
-
-.w-1\/4 {
-  width: 25%;
-}
-
-.min-w-full {
-  min-width: 100%;
+.w-1\/2 {
+  width: 50%;
 }
 
 .max-w-sm {
@@ -695,6 +646,10 @@ video {
   cursor: pointer;
 }
 
+.resize {
+  resize: both;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -703,20 +658,12 @@ video {
   flex-direction: column;
 }
 
-.items-start {
-  align-items: flex-start;
-}
-
 .items-end {
   align-items: flex-end;
 }
 
 .items-center {
   align-items: center;
-}
-
-.justify-start {
-  justify-content: flex-start;
 }
 
 .justify-end {
@@ -729,6 +676,10 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .border-2 {
@@ -796,12 +747,27 @@ video {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
+.bg-slate-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
+.bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+
 .p-1 {
   padding: 0.25rem;
 }
 
-.p-0 {
-  padding: 0px;
+.p-4 {
+  padding: 1rem;
 }
 
 .px-1 {
@@ -809,82 +775,13 @@ video {
   padding-right: 0.25rem;
 }
 
-.pb-10 {
-  padding-bottom: 2.5rem;
-}
-
-.pt-8 {
-  padding-top: 2rem;
-}
-
-.pb-0 {
-  padding-bottom: 0px;
-}
-
-.pt-60 {
-  padding-top: 15rem;
-}
-
-.pt-52 {
-  padding-top: 13rem;
-}
-
-.pt-24 {
-  padding-top: 6rem;
-}
-
-.pt-32 {
-  padding-top: 8rem;
-}
-
-.pt-40 {
-  padding-top: 10rem;
-}
-
 .text-left {
   text-align: left;
 }
 
-.text-center {
-  text-align: center;
-}
-
-.align-baseline {
-  vertical-align: baseline;
-}
-
-.align-top {
-  vertical-align: top;
-}
-
-.align-middle {
-  vertical-align: middle;
-}
-
-.align-bottom {
-  vertical-align: bottom;
-}
-
-.align-text-top {
-  vertical-align: text-top;
-}
-
-.align-text-bottom {
-  vertical-align: text-bottom;
-}
-
-.align-super {
-  vertical-align: super;
-}
-
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-medium {
@@ -934,22 +831,29 @@ video {
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
-.hover\:bg-gray-300:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-gray-400:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-slate-100:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+.hover\:resize:hover {
+  resize: both;
 }
 
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+@media (min-width: 640px) {
+  .sm\:max-w-sm {
+    max-width: 24rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:max-w-md {
+    max-width: 28rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:max-w-lg {
+    max-width: 32rem;
+  }
 }
