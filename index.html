@@ -12,15 +12,16 @@
   <link rel="stylesheet" href="./dist/output.css">
 </head>
     <body>
-      <section class="escritorio bg-teal-300 flex flex-col justify-between items-center h-screen">
-      <div class="iconos w-full h-24 flex justify-center items-center">
-        <div class="w-14 h-14 ">
-          <img class="msDos cursor-pointer" src="./src/imagenes/ms-dos.png" alt="icono MS-DOS">
+      <section class="escritorio bg-teal-300 flex flex-col justify-between items-center h-screen z-0">
+      <div class="  iconos w-full h-24 flex justify-center items-center">
+        <div class="w-14 h-14 z-10 ">
+          <img class="miVentana msDos cursor-pointer w-24 h-24" src="./src/imagenes/ms-dos.png" alt="icono MS-DOS">
         </div> 
       </div>
-      <main class="ventana sm:w-sm md:w-md lg:w-lg m-2">
+     
+      <main class="ventana sm:w-sm md:w-md lg:w-lg m-2 z-20">
           
-            <div class="bg-blue-600 border-2 border-white flex flex-row justify-between">
+            <div class=" bg-blue-600 border-2 border-white flex flex-row justify-between">
                 <div class="text-white font-medium w-full flex items-center">
                 <img class='w-6 h-6' src="./src/imagenes/ms-dos.png" alt="icono MS-DOS">
                   MS-DOS Prompt
@@ -38,7 +39,7 @@
                     </div>
                 </div>
             </div>
-            <div style="min-height: 300px;" class="bg-black text-white border-2 border-t-0" id="terminalWindow" >
+            <div class="bg-black text-white border-2 border-t-0 overflow-y-scroll max-w-lg h-80" id="terminalWindow" >
               <section id="terminal">
                 <div>Successful login - <span id="date"></span></div>
                 <div>Mi Portfolio</div>
@@ -49,6 +50,8 @@
               </div> 
             </div>
       </main>
+  
+   
     
 
       <footer class="w-full h-10 bg-gray-200 flex justify-between items-center p-1 z-10">
@@ -226,6 +229,7 @@
       <button class="btnEncender bg-green-600 text-white font-bold text-2xl p-4 rounded-full">Encender</button>
     </section>
       <script src="./src/scripts/enventoMenu.js"></script>
+      <script src="./src/scripts/drag.js"></script>
      
         
     </body>
