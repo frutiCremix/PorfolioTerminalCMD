@@ -1,71 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio terminal</title>
-  <script src="./src/scripts/script.js" type="text/javascript" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./dist/output.css">
-</head>
-    <body>
-      <section class="escritorio bg-teal-300 flex flex-col justify-between items-center h-screen z-0">
-      <div class="  iconos w-full h-24 flex justify-center items-center">
-        <div class="w-14 h-14 z-10 ">
-          <img class="miVentana msDos cursor-pointer w-20 h-20" src="./src/imagenes/ms-dos.png" alt="icono MS-DOS">
-        </div> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio terminal</title>
+    <script src="./src/scripts/script.js" type="text/javascript" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body>
+    <section
+      class="escritorio bg-teal-300 flex flex-col justify-between items-center h-screen z-0"
+    >
+      <div class="iconos w-full h-24 flex fex-row justify-center items-center">
+        <div class="w-10 h-10 z-10">
+          <img
+            class="miVentana msDos cursor-pointer w-10 h-10"
+            src="./src/imagenes/ms-dos.png"
+            alt="icono MS-DOS"
+          />
+        </div>
+        <div class="w-12 h-14 z-10">
+          <img
+            class="miVentana ventanaGenerica cursor-pointer w-12 h-14"
+            src="./src/imagenes/win98-carpeta-icon.png"
+            alt="icono carpeta"
+          />
+        </div>
+        
+        <div class="w-10 h-10 z-10">
+          <img
+            class="miVentana ventanaGenerica cursor-pointer w-10 h-10"
+            src="./src/imagenes/win98-papelera-icon.png"
+            alt="icono papelera"
+          />
+        </div>
       </div>
-     
+      <div class="vistaVentanas"></div>
       <main class="ventana sm:w-sm md:w-md lg:w-lg m-2 z-20">
-          
-            <div class=" bg-blue-600 border-2 border-white flex flex-row justify-between">
-                <div class="text-white font-medium w-full flex items-center">
-                <img class='w-6 h-6' src="./src/imagenes/ms-dos.png" alt="icono MS-DOS">
-                  MS-DOS Prompt
-                </div>
-                <div class="flex justify-center items-center">
-                    <div class="bg-gray-300 px-1 w-6 h-6 flex justify-center items-center border-gray-600 border-2">
-                      <div class="border-b-2 w-2 h-1 border-black">
-                      </div>  
-                    </div>
-                    <div class="bg-gray-300 px-1 w-6 h-6 flex justify-center items-center border-gray-600 border-2">
-                      <div class="border-2 border-black h-3 w-3"></div>
-                    </div>
-                    <div class="cerrarVentana bg-gray-300 px-1 w-6 h-6 flex justify-center items-center border-gray-600 border-2 cursor-pointer">
-                      <div class="font-semibold">X</div>
-                    </div>
-                </div>
+        <div
+          class="bg-blue-600 border-2 border-white flex flex-row justify-between"
+        >
+          <div class="text-white font-medium w-full flex items-center">
+            <img
+              class="w-6 h-6"
+              src="./src/imagenes/ms-dos.png"
+              alt="icono MS-DOS"
+            />
+            MS-DOS Prompt
+          </div>
+          <div class="flex justify-center items-center">
+            <div
+              class="bg-gray-300 px-1 w-6 h-6 flex justify-center items-center border-gray-600 border-2"
+            >
+              <div class="border-b-2 w-2 h-1 border-black"></div>
             </div>
-            <div class="bg-black text-white border-2 border-t-0 overflow-y-scroll max-w-lg h-80" id="terminalWindow" >
-              <section id="terminal">
-                <div>Successful login - <span id="date"></span></div>
-                <div>Mi Portfolio</div>
-                Hola! Bienvenidos a mi portfolio, para ver la lista de commandos ingresá --> <span class="text-green-500">help</span>
-              </section>
-              <div class="flex">
-                <span>C:\></span><input class="bg-black border-none w-full focus:outline-none" id="promtInput"/>
-              </div> 
+            <div
+              class="bg-gray-300 px-1 w-6 h-6 flex justify-center items-center border-gray-600 border-2"
+            >
+              <div class="border-2 border-black h-3 w-3"></div>
             </div>
+            <div
+              class="cerrarVentana bg-gray-300 px-1 w-6 h-6 flex justify-center items-center border-gray-600 border-2 cursor-pointer"
+            >
+              <div class="font-semibold">X</div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-black text-white border-2 border-t-0 overflow-y-scroll max-w-lg h-80"
+          id="terminalWindow"
+        >
+          <section id="terminal">
+            <div>Successful login - <span id="date"></span></div>
+            <div>Mi Portfolio</div>
+            Hola! Bienvenidos a mi portfolio, para ver la lista de commandos
+            ingresá --> <span class="text-green-500">help</span>
+          </section>
+          <div class="flex">
+            <span>C:\></span
+            ><input
+              class="bg-black border-none w-full focus:outline-none"
+              id="promtInput"
+            />
+          </div>
+        </div>
       </main>
-  
-   
-    
 
-      <footer class="w-full h-10 bg-gray-200 flex justify-between items-center p-1 z-10">
-        
-          <button class="btnInicio border border-gray-400 h-full w-20">Inicio</button>
-          <div class="border border-gray-400 h-full w-40 flex justify-center items-center">Fecha y Hora</div>
-        
+      <footer
+        class="w-full h-10 bg-gray-200 border-t-2 border-t-white flex justify-between items-center p-1 z-10"
+      >
+        <button
+          class="btnInicio flex flex-row items-center justify-center border border-t-white border-l-white border-b-black border-r-black border-b-2 border-r-2 hover:shadow-inner2-hover hover:border-b-white hover:border-r-white h-full w-20"
+        >
+          <img
+            src="./src/imagenes/win98-icon.png"
+            class="w-1/4 h-auto"
+            alt=""
+          /><span>Inicio</span>
+        </button>
+        <div
+          class="h-full w-40 flex flex-col justify-center items-center text-xs font-bold shadow-inner2 border-t-black border-l-black border-2 border-b-white border-r-white"
+        >
+          <span id="hora"></span><span id="fecha"></span>
+        </div>
       </footer>
-      <div class="menuDesplegable hidden absolute w-40  h-full left-0 items-end">
+      <div class="menuDesplegable hidden absolute w-40 h-full left-0 items-end">
         <div class="bg-gray-200 h-1/2 w-full flex flex-row mb-10">
-          <div class="bg-blue-600 w-1/4 ">
-            <ul class="text-white font-bold h-full mt-10">           
+          <div class="bg-blue-600 w-1/4">
+            <ul class="text-white font-bold h-full mt-10">
               <li class="-rotate-90">8</li>
-              <li class="-rotate-90">9</li>  
+              <li class="-rotate-90">9</li>
+              <li class="-rotate-90">s</li>
               <li class="-rotate-90">w</li>
               <li class="-rotate-90">o</li>
               <li class="-rotate-90">d</li>
@@ -75,162 +127,209 @@
             </ul>
           </div>
           <div class="flex justify-end items-end w-full">
-              <button class= "btnApagar text-left bg-gray-200 w-full">Apagar</button>
+            <button class="btnApagar text-left bg-gray-200 w-full">
+              Apagar
+            </button>
           </div>
         </div>
       </div>
-        
+
       <div class="hidden" id="promptClone">
-            <span>C:\></span> <span class="text-green-500">user</span> <span class="promtCloneInput"></span>
-            <div class="promtCloneContent"></div>
+        <span>C:\></span> <span class="text-green-500">user</span>
+        <span class="promtCloneInput"></span>
+        <div class="promtCloneContent"></div>
       </div>
 
       <div class="hidden" id="help">
-            <div>Comandos disponibles: </div>
-            <div>
-              <div>
-                <span class="command text-green-500">about</span>:
-                <div>"Sobre mi"</div> 
-              </div>
-              <div>
-                <span class="command text-green-500">social</span>:
-                <div >"Listado de mis redes sociales"</div> 
-              </div>
-              <div>
-                <span class="command text-green-500">skills</span>:
-                <div >"Las herramientas con las que trabajo"</div> 
-              </div>
-              <div>
-                <span class="command text-green-500">education</span>:
-                <div >"Todo sobre mi formación"</div> 
-              </div>
-              <div>
-                <span class="command text-green-500">experience</span>:
-                <div >"Donde trabajé hasta ahora"</div> 
-              </div>
-              <div>
-                <span class="command text-green-500">projects</span>:
-                <div >"Un listado de mis proyectos"</div> 
-              </div>
-              <div>
-                <span class="command text-green-500">clear</span>:
-                <div>"Borrar el historial de la terminal"</div> 
-              </div>
-            </div>
+        <div>Comandos disponibles:</div>
+        <div>
+          <div>
+            <span class="command text-green-500">about</span>:
+            <div>"Sobre mi"</div>
+          </div>
+          <div>
+            <span class="command text-green-500">social</span>:
+            <div>"Listado de mis redes sociales"</div>
+          </div>
+          <div>
+            <span class="command text-green-500">skills</span>:
+            <div>"Las herramientas con las que trabajo"</div>
+          </div>
+          <div>
+            <span class="command text-green-500">education</span>:
+            <div>"Todo sobre mi formación"</div>
+          </div>
+          <div>
+            <span class="command text-green-500">experience</span>:
+            <div>"Donde trabajé hasta ahora"</div>
+          </div>
+          <div>
+            <span class="command text-green-500">projects</span>:
+            <div>"Un listado de mis proyectos"</div>
+          </div>
+          <div>
+            <span class="command text-green-500">clear</span>:
+            <div>"Borrar el historial de la terminal"</div>
+          </div>
+        </div>
       </div>
-      
+
       <div class="hidden" id="projects">
-            <div>Proyectos: </div>
-            <div>
-              <span>Gestor Biblioteca con MVC y BD</span> - <a href="https://github.com/frutiCremix/gestorBiblioteca.git" target="_blank"><span class="text-green-500">Link a github</span> </a>
-            </div>
-            <div>
-              <span>Traductor</span> - <a href="https://github.com/frutiCremix/traductor.git" target="_blank"><span class="text-green-500">Link a github</span> </a>
-            </div>
-            <div>
-              <span >CodeWise editor de codigo online</span> - <a href="https://github.com/frutiCremix/CodeWise.git" target="_blank"><span class="text-green-500">Link a github</span> </a>
-            </div>
-            <div>
-              <span>Mas repos!!! --> </span> - <a href="https://github.com/frutiCremix?tab=repositories" target="_blank"><span class="text-green-500">Link a github</span> </a>
-            </div>
-            
+        <div>Proyectos:</div>
+        <div>
+          <span>Gestor Biblioteca con MVC y BD</span> -
+          <a
+            href="https://github.com/frutiCremix/gestorBiblioteca.git"
+            target="_blank"
+            ><span class="text-green-500">Link a github</span>
+          </a>
+        </div>
+        <div>
+          <span>Traductor</span> -
+          <a href="https://github.com/frutiCremix/traductor.git" target="_blank"
+            ><span class="text-green-500">Link a github</span>
+          </a>
+        </div>
+        <div>
+          <span>CodeWise editor de codigo online</span> -
+          <a href="https://github.com/frutiCremix/CodeWise.git" target="_blank"
+            ><span class="text-green-500">Link a github</span>
+          </a>
+        </div>
+        <div>
+          <span>Mas repos!!! --> </span> -
+          <a
+            href="https://github.com/frutiCremix?tab=repositories"
+            target="_blank"
+            ><span class="text-green-500">Link a github</span>
+          </a>
+        </div>
       </div>
-      
+
       <div class="hidden" id="skills">
-            <div>Skills: </div>
+        <div>Skills:</div>
+        <div>
+          <div>
+            <span>Programacion</span>:
             <div>
-              <div>
-                <span>Programacion</span>:
-                <div>"
-                  <span class="text-yellow-200">javascript</span>
-                  <span class="text-blue-500">React</span>
-                  <span class="text-cyan-300">CSS TailwindCss</span>
-                  <span class="text-red-300">HTML</span>
-                  
-                  <span class="text-green-400">NodeJs Express NPM</span>
-                  <span class="text-blue-200">MySQL</span>
-                  <span class="text-red-500">GIT</span>
-                </div> 
-              </div>
-              <div>
-                <span>Idiomas</span>:
-                <div>
-                  <span>Español</span>
-                  <span>Ingles</span>
-                </div> 
-              </div>
+              "
+              <span class="text-yellow-200">javascript</span>
+              <span class="text-blue-500">React</span>
+              <span class="text-cyan-300">CSS TailwindCss</span>
+              <span class="text-red-300">HTML</span>
+
+              <span class="text-green-400">NodeJs Express NPM</span>
+              <span class="text-blue-200">MySQL</span>
+              <span class="text-red-500">GIT</span>
             </div>
+          </div>
+          <div>
+            <span>Idiomas</span>:
+            <div>
+              <span>Español</span>
+              <span>Ingles</span>
+            </div>
+          </div>
+        </div>
       </div>
-      
+
       <div class="hidden" id="about">
-                <div>
-                    Sobre mi:
-                </div>
-                <div>
-                    Hola! mi nombre es <span>Sebastian Oliveto</span>
-                    Me apasiona la programación y hacer que las cosas funcionen. Busco desarrollar mi carrera como programador.    
-                </div> 
+        <div>Sobre mi:</div>
+        <div>
+          Hola! mi nombre es <span>Sebastian Oliveto</span>
+          Me apasiona la programación y hacer que las cosas funcionen. Busco
+          desarrollar mi carrera como programador.
+        </div>
       </div>
-      
+
       <div class="hidden" id="experience">
-            Soy miembro/investigador del proyecto simulador ferroviario de la Universidad,
-            del cual ademas de desarrollar funcionalidades donde he tenido la oportunidad 
-            de trabajar en equipo y aplicar mis habilidades en un ambiente de proyecto real,
-            tabien estoy a cargo del diseño y desarrollo de la web del mismo. 
-             Nuestro equipo ha tenido el privilegio de ganar un premio otorgado
-            en el Concurso Nacional de Innovaciones(Tecnopolis), lo cual es un gran logro 
-            para mi y un testimonio de mi dedicacion al aprendizaje y al desarrollo de habilidades.
+        Soy miembro/investigador del proyecto simulador ferroviario de la
+        Universidad, del cual ademas de desarrollar funcionalidades donde he
+        tenido la oportunidad de trabajar en equipo y aplicar mis habilidades en
+        un ambiente de proyecto real, tabien estoy a cargo del diseño y
+        desarrollo de la web del mismo. Nuestro equipo ha tenido el privilegio
+        de ganar un premio otorgado en el Concurso Nacional de
+        Innovaciones(Tecnopolis), lo cual es un gran logro para mi y un
+        testimonio de mi dedicacion al aprendizaje y al desarrollo de
+        habilidades.
       </div>
-      
+
       <div class="hidden" id="social">
-            <div>Redes sociales: </div>
-            <div>
-              <span>Github</span> - <span><a href="https://github.com/frutiCremix"target="_blank">https://github.com/frutiCremix</a></span>
-            </div>
-            <div>
-              <span>LinkedIn</span> - <span><a href="https://www.linkedin.com/in/sebastianoliveto/" target="_blank">https://linkedin.com/in/sebastianoliveto/</a></span>
-            </div>
+        <div>Redes sociales:</div>
+        <div>
+          <span>Github</span> -
+          <span
+            ><a href="https://github.com/frutiCremix" target="_blank"
+              >https://github.com/frutiCremix</a
+            ></span
+          >
+        </div>
+        <div>
+          <span>LinkedIn</span> -
+          <span
+            ><a
+              href="https://www.linkedin.com/in/sebastianoliveto/"
+              target="_blank"
+              >https://linkedin.com/in/sebastianoliveto/</a
+            ></span
+          >
+        </div>
       </div>
-      
+
       <div class="hidden" id="education">
-            <div>Formación: </div>
-            <div>
-              <span>Lic en Sistemas de Informacion- UNLa</span> <span>2do año</span>
-            </div>
-            <div>
-                <span>Curso FreeCodeCamp- Nodejs Express</span> <span>En progreso</span>
-            </div>
-            <div>
-                <span>Curso FreeCodeCamp- React</span> <span>Finalizado 2022</span>
-            </div>
-            <div>
-                <span>Curso FreeCodeCamp- javascript y Estructura de datos</span> <span>Finalizado 2021</span>
-            </div>
-            <div> 
-              <span>Curso FreeCodeCamp- Front End</span> <span>Finalizado 2021</span>
-            </div>
-            <div>
-                <span>Curso FreeCodeCamp- Responsive Design</span> <span>Finalizado 2021</span>
-            </div>
+        <div>Formación:</div>
+        <div>
+          <span>Lic en Sistemas de Informacion- UNLa</span> <span>2do año</span>
+        </div>
+        <div>
+          <span>Curso FreeCodeCamp- Nodejs Express</span>
+          <span>En progreso</span>
+        </div>
+        <div>
+          <span>Curso FreeCodeCamp- React</span> <span>Finalizado 2022</span>
+        </div>
+        <div>
+          <span>Curso FreeCodeCamp- javascript y Estructura de datos</span>
+          <span>Finalizado 2021</span>
+        </div>
+        <div>
+          <span>Curso FreeCodeCamp- Front End</span>
+          <span>Finalizado 2021</span>
+        </div>
+        <div>
+          <span>Curso FreeCodeCamp- Responsive Design</span>
+          <span>Finalizado 2021</span>
+        </div>
       </div>
       <section class="hidden" id="reset">
         <div>Successful login - <span id="date"></span></div>
         <div>Mi Portfolio</div>
-        Hola! Bienvenidos a mi portfolio, para ver la lista de commandos ingresá --> <span class="text-green-500">help</span>
+        Hola! Bienvenidos a mi portfolio, para ver la lista de commandos ingresá
+        --> <span class="text-green-500">help</span>
       </section>
     </section>
     <section class="pantallaInicio hidden w-full h-screen">
-      
-      <img class='w-full h-full' src="https://i.gifer.com/AyHC.gif" alt="gif cierre de window98">
-      <audio id='audioApagado'src="./src/sonidos/Windows 98 sonido de prendido y apagado.mp3"></audio>
-      
+      <img
+        class="w-full h-full"
+        src="https://i.gifer.com/AyHC.gif"
+        alt="gif cierre de window98"
+      />
+      <audio
+        id="audioApagado"
+        src="./src/sonidos/Windows 98 sonido de prendido y apagado.mp3"
+      ></audio>
     </section>
-    <section class="hidden w-full h-screen pantallaNegra  bg-black justify-center items-center">
-      <button class="btnEncender bg-green-600 text-white font-bold text-2xl p-4 rounded-full">Encender</button>
+    <section
+      class="hidden w-full h-screen pantallaNegra bg-black justify-center items-center"
+    >
+      <button
+        class="btnEncender bg-green-600 text-white font-bold text-2xl p-4 rounded-full"
+      >
+        Encender
+      </button>
     </section>
-      <script src="./src/scripts/enventoMenu.js"></script>
-      <script src="./src/scripts/drag.js"></script>
-     
-        
-    </body>
+    <script src="./src/scripts/enventoMenu.js"></script>
+    <script src="./src/scripts/drag.js"></script>
+    <script src="./src/scripts/ventanaGenerica.js"></script>
+  </body>
 </html>
