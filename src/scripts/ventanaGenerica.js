@@ -25,8 +25,9 @@ function crearVentana() {
                 <h2 class="text-white">ventana generica</h2>
                 <button class="btnCierre bg-gray-200 px-1 text-black border-gray-600 border-2">X</button>
             </div>
-            <div class="w-full h-24 bg-gray-200">
-                <ul class="flex flex-row gap-x-6">
+            <div class="w-full h-auto bg-gray-300 border-b-2">
+            <div class="">    
+            <ul class="flex flex-row gap-x-6">
                     <li class="p-1 ">
                         <p class="">Archivo</p>
                     </li>
@@ -49,41 +50,42 @@ function crearVentana() {
                         <p>Ayuda</p>
                     </li>
                 </ul>
-                <ul class="flex flex-row justify-between">
+                <ul class="flex flex-row" style="justify-content:space-around;">
                     <li>
-                        <button class="h-10 border-black border">
-                            boton
+                        <button style="padding-left:10px;padding-right:10px;">
+                        <img style="transform: rotate(180deg);" class="h-10 w-10" src="./src/imagenes/arrow-icon.png">Atras
                         </button>
                     </li>
                     <li>
-                        <button class="h-10 border-black border">
-                            boton
+                        <button style="padding-left:10px;padding-right:10px;">
+                        <img class="h-10 w-10" src="./src/imagenes/arrow-icon.png">Atras
+                        </button>
+                    </li>
+                    <li style="border-right:1px solid #C6C0BE; padding-right:10px">
+                        <button style="padding-left:10px;padding-right:10px;">
+                            <img class="h-10 w-10" src="./src/iconos/directory_closed.ico">Subir
                         </button>
                     </li>
                     <li>
-                        <button class="h-10 border-black border">
-                            boton
+                        <button style="padding-left:10px;padding-right:10px;">
+                        <img class="h-10 w-10" src="src/imagenes/cut-icon.png">Cortar
                         </button>
                     </li>
                     <li>
-                        <button class="h-10 border-black border">
-                            boton
+                        <button style="padding-left:10px;padding-right:10px;">
+                        <img class="h-10 w-10" src="src/imagenes/paste-icon.png">Pegar
                         </button>
                     </li>
                     <li>
-                        <button class="h-10 border-black border">
-                            boton
-                        </button>
-                    </li>
-                    <li>
-                        <button class="h-10 border-black border">
-                            boton
+                        <button style="padding-left:10px;padding-right:10px;">
+                        <img class="h-10 w-10" src="src/imagenes/copy-icon.png">Copiar
                         </button>
                     </li>
                    
-                </ul>   
+                </ul> 
+            </div>  
                    <div class="flex flex-row">
-                        <label class="margin-r-2">Direccion</label>
+                        <label style="padding:2px">Direccion</label>
                         <select class="w-full h-4">
                             <option value="opcion1">C:/</option>
                             <option value="opcion1">D:/</option>
@@ -91,8 +93,8 @@ function crearVentana() {
                                                       
                         </select>
                     </div>
-                </div>
-                <div class="h-full">
+            </div>
+            <div class="h-full">
                     <ul>
                     <li class="flex"><img class="h-6"src="./src/imagenes/win98-carpeta-icon.png">item 1</li>
                     <li class="flex"><img class="h-6"src="./src/imagenes/win98-carpeta-icon.png">item 1</li>
@@ -100,9 +102,9 @@ function crearVentana() {
                     <li class="flex"><img class="h-6"src="./src/imagenes/win98-carpeta-icon.png">item 1</li>
                     
                     </ul>
-                </div>
+            </div>
             <div class="w-full h-10 bg-gray-200">
-            </div>`;
+        </div>`;
 
   const btnCierre = div.querySelector(".btnCierre"); // Selección del botón dentro del div
   btnCierre.addEventListener("click", (e) => {
