@@ -145,13 +145,21 @@ const tecnologias = [
     texto: "NPM",
   },
 ];
+const cv=[
+  {
+    id: "Curriculum vitae",
+    url: "src/CV.pdf",
+    icon: "src/imagenes/icons8-pdf-48.png",
+    texto: "CV.pdf",
+  },
+]
 
 const arrVentanas = document.querySelectorAll(".ventanaGenerica");
 const vistaVentanas = document.querySelector(".vistaVentanas");
 
 arrVentanas.forEach((e) =>
   e.addEventListener("dblclick", (event) => {
-    console.log(event.target.name);
+    //console.log(event.target.name);
     switch (event.target.name) {
       //crear un json y pasarlo como parametro
       case "proyectos":
@@ -162,6 +170,9 @@ arrVentanas.forEach((e) =>
         break;
       case "tecnologias":
         crearVentana(tecnologias);
+        break;
+      case "CV":
+        crearVentana(cv);
         break;
     }
   })
@@ -266,6 +277,9 @@ function crearVentana(obj) {
   btnCierre.addEventListener("click", (e) => {
     vistaVentanas.removeChild(div); //lo eliminamos
     //div.style.display = 'none'; // Oculta la ventana al hacer clic en el botón de cierre
+
+
+    
   });
 
   vistaVentanas.appendChild(div);

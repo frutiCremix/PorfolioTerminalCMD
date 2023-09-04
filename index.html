@@ -16,10 +16,10 @@
   </head>
   <body>
     <section
-      class="escritorio bg-teal-300 flex flex-col justify-between items-center h-screen z-0"
+      class="escritorio bg-desktop flex flex-col justify-between items-center h-screen z-0"
     >
       <div
-        class="iconos w-full h-24 flex fex-row gap-x-8 justify-center items-center"
+        class="iconos w-full h-24 flex flex-row gap-x-10 justify-center items-center"
       >
         <div class="w-10 h-10 z-10">
           <img
@@ -30,6 +30,15 @@
           />
           <!--misma name(img) y class(p) para el drag-->
           <p class="MS-DOS text-xs">MS-DOS</p>
+        </div>
+        <div class="w-12 h-14 z-10 ">
+          <img
+            class="miVentana ventanaGenerica cursor-pointer w-12 h-14"
+            src="./src/iconos/directory_open_file_mydocs_small.ico"
+            alt="icono carpeta"
+            name="CV"
+          />
+          <p class="CV">Curriculum</p>
         </div>
         <div class="w-12 h-14 z-10 ">
           <img
@@ -58,6 +67,7 @@
           />
           <p class="tecnologias">Tecnologias</p>
         </div>
+        
       </div>
       <div class="vistaVentanas"></div>
       <main class="ventana sm:w-sm md:w-md lg:w-lg m-2 z-20">
