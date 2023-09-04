@@ -662,6 +662,10 @@ video {
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-end {
   justify-content: flex-end;
 }
@@ -672,6 +676,11 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-x-8 {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
 }
 
 .overflow-y-scroll {

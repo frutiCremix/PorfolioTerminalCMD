@@ -6,16 +6,16 @@ const proyectos = [
     texto: "Demo",
   },
   {
-    id: "mvc",
-    url: "./",
-    icon: "src/imagenes/012-nodejs.png",
+    id: "Web Simulador Ferroviario",
+    url: "https://simuladorferroviario.netlify.app/",
+    icon: "src/imagenes/icons8-tailwind-css-48.png",
     texto: "Demo",
   },
 ];
 const profolio = [
   {
-    id: "pokedex",
-    url: "https://github.com/frutiCremix/Pokedex",
+    id: "porfolio general",
+    url: "https://github.com/frutiCremix",
     icon: "src/imagenes/008-github.png",
     texto: "gitHub",
   },
@@ -31,6 +31,119 @@ const profolio = [
     icon: "src/imagenes/008-github.png",
     texto: "gitHub",
   },
+  {
+    id: "pokedex",
+    url: "https://github.com/frutiCremix/Pokedex",
+    icon: "src/imagenes/008-github.png",
+    texto: "gitHub",
+  },
+  {
+    id: "CodeWise",
+    url: "https://github.com/frutiCremix/CodeWise",
+    icon: "src/imagenes/008-github.png",
+    texto: "gitHub",
+  },
+  {
+    id: "traductor",
+    url: "https://github.com/frutiCremix/traductor",
+    icon: "src/imagenes/008-github.png",
+    texto: "gitHub",
+  },
+  {
+    id: "frutiPaint",
+    url: "https://github.com/frutiCremix/frutiPaint",
+    icon: "src/imagenes/008-github.png",
+    texto: "gitHub",
+  },
+ 
+  
+];
+const tecnologias = [
+  {
+    id: "javascript",
+    url: "https://developer.mozilla.org/es/docs/Web/JavaScript",
+    icon: "src/imagenes/009-js.png",
+    texto: "MDN web Docs",
+  },
+  {
+    id: "nodeJs",
+    url: "https://nodejs.org",
+    icon: "src/imagenes/012-nodejs.png",
+    texto: "NodeJS",
+  },
+  {
+    id: "express",
+    url: "https://expressjs.com/es/",
+    icon: "src/imagenes/icons8-express-js-50.png",
+    texto: "Express",
+  },
+  {
+    id: "React",
+    url: "https://es.react.dev/",
+    icon: "src/imagenes/icons8-reaccionar-40.png",
+    texto: "React",
+  },
+  {
+    id: "Vite",
+    url: "https://vitejs.dev/",
+    icon: "src/imagenes/vite.png",
+    texto: "Vite",
+  },
+
+  {
+    id: "tailwindCss",
+    url: "https://tailwindcss.com/",
+    icon: "src/imagenes/icons8-tailwind-css-48.png",
+    texto: "tailwindCss",
+  },
+  {
+    id: "html",
+    url: "https://developer.mozilla.org/es/docs/Web/HTML",
+    icon: "src/imagenes/011-html-5.png",
+    texto: "MDN web Docs",
+  },
+  {
+    id: "css",
+    url: "https://developer.mozilla.org/es/docs/Web/CSS",
+    icon: "src/imagenes/010-css-3.png",
+    texto: "MDN web Docs",
+  },
+  {
+    id: "MySQL",
+    url: "https://www.mysql.com",
+    icon: "src/imagenes/013-mysql.png",
+    texto: "MySQL",
+  },
+  {
+    id: "Java",
+    url: "https://www.java.com/es/",
+    icon: "src/imagenes/icons8-java-48.png",
+    texto: "Java",
+  },
+  {
+    id: "GIT",
+    url: "https://git-scm.com/",
+    icon: "src/imagenes/icons8-git-48.png",
+    texto: "GIT",
+  },
+  {
+    id: "GitHub",
+    url: "https://github.com/frutiCremix",
+    icon: "src/imagenes/008-github.png",
+    texto: "GitHub",
+  },
+  {
+    id: "TypeScript",
+    url: "https://www.typescriptlang.org/",
+    icon: "src/imagenes/icons8-typescript-48.png",
+    texto: "TypeScript",
+  },
+  {
+    id: "NPM",
+    url: "https://www.npmjs.com/",
+    icon: "src/imagenes/icons8-npm-48.png",
+    texto: "NPM",
+  },
 ];
 
 const arrVentanas = document.querySelectorAll(".ventanaGenerica");
@@ -41,14 +154,15 @@ arrVentanas.forEach((e) =>
     console.log(event.target.name);
     switch (event.target.name) {
       //crear un json y pasarlo como parametro
-      case "papelera":
+      case "proyectos":
         crearVentana(proyectos);
         break;
-      case "carpeta":
+      case "gitHub":
         crearVentana(profolio);
         break;
-      default:
-        crearVentana(porfolio);
+      case "tecnologias":
+        crearVentana(tecnologias);
+        break;
     }
   })
 );
@@ -65,8 +179,9 @@ function crearVentana(obj) {
   div.style.justifyContent = "space-Between";
   div.style.position = "absolute";
   div.style.left = `${r}px`;
-  div.style.top=`${r}px`;
+  div.style.top = `${r}px`;
   div.style.zIndex = "100";
+  div.style.overflow="hidden";
   div.innerHTML = `
             <div class="w-full h-10 bg-blue-600 flex justify-between items-center font-bold">
                 <h2 class="text-white">ventana generica</h2>
@@ -141,12 +256,10 @@ function crearVentana(obj) {
                         </select>
                     </div>
             </div>
-            <div class="h-full">
-                   
-                    ${crearlista(obj).outerHTML}
-                    
+            <div style="height:300px; overflow-y: scroll;">
+              ${crearlista(obj).outerHTML}
             </div>
-            <div class="w-full h-10 bg-gray-200">
+            <div class="w-full h-6 bg-gray-200">
         </div>`;
 
   const btnCierre = div.querySelector(".btnCierre"); // Selección del botón dentro del div
@@ -162,25 +275,20 @@ function crearVentana(obj) {
   crearVentana(); // Llama a la función crearVentana al cargar la página
 });*/
 function crearlista(obj) {
-    let arr = [];
-    obj.forEach(e => {
-      arr.push(e);
-    });
-  
-    let lista = document.createElement("ul");
-    
-    for (let i = 0; i < arr.length; i++) {
-      let listItem = document.createElement("li");
-      listItem.style.display="flex"; // Crear un elemento <li>
-      let elem = `<img class="h-6" src="${obj[i].icon}">${obj[i].id}--<a href="${obj[i].url}" target="_blank"><span class="text-blue-500">${obj[i].texto}</span></a>`;
-      listItem.innerHTML = elem; // Establecer el contenido del elemento <li>
-      lista.appendChild(listItem); // Agregar el elemento <li> a la lista
-    }
-    return lista;
+  let arr = [];
+  obj.forEach((e) => {
+    arr.push(e);
+  });
+
+  let lista = document.createElement("ul");
+    lista.style.paddingLeft="2px";
+  for (let i = 0; i < arr.length; i++) {
+    let listItem = document.createElement("li");
+    listItem.style.display = "flex";
+    listItem.style.gap="10px"; // Crear un elemento <li>
+    let elem = `<img class="h-6" src="${obj[i].icon}">${obj[i].id}<a href="${obj[i].url}" target="_blank"><span class="text-blue-500">${obj[i].texto}</span></a>`;
+    listItem.innerHTML = elem; // Establecer el contenido del elemento <li>
+    lista.appendChild(listItem); // Agregar el elemento <li> a la lista
   }
-  
-  
-  
-  
-  
-  
+  return lista;
+}
