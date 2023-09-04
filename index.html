@@ -18,7 +18,9 @@
     <section
       class="escritorio bg-teal-300 flex flex-col justify-between items-center h-screen z-0"
     >
-      <div class="iconos w-full h-24 flex fex-row gap-x-8 justify-center items-center">
+      <div
+        class="iconos w-full h-24 flex fex-row gap-x-8 justify-center items-center"
+      >
         <div class="w-10 h-10 z-10">
           <img
             class="miVentana msDos cursor-pointer w-10 h-10"
@@ -33,7 +35,8 @@
             src="./src/iconos/directory_open_file_mydocs_small.ico"
             alt="icono carpeta"
             name="gitHub"
-          /><p>gitHub</p>
+          />
+          <p>gitHub</p>
         </div>
         <div class="w-12 h-14 z-10">
           <img
@@ -41,7 +44,8 @@
             src="./src/iconos/directory_open_file_mydocs_small.ico"
             alt="icono carpeta"
             name="proyectos"
-          /><p>proyectos</p>
+          />
+          <p>proyectos</p>
         </div>
         <div class="w-12 h-14 z-10">
           <img
@@ -49,10 +53,9 @@
             src="./src/iconos/directory_open_file_mydocs_small.ico"
             alt="icono carpeta"
             name="tecnologias"
-          /><p>Tecnologias</p>
+          />
+          <p>Tecnologias</p>
         </div>
-        
-       
       </div>
       <div class="vistaVentanas"></div>
       <main class="ventana sm:w-sm md:w-md lg:w-lg m-2 z-20">
@@ -123,24 +126,35 @@
           <span id="hora"></span><span id="fecha"></span>
         </div>
       </footer>
-      <section class="menuDesplegable hidden absolute w-40 h-full left-0 items-end">
-        <div class="bg-gray-200 h-1/2 w-full flex flex-row mb-10">
-          <div class="bg-blue-600 w-1/4">
-            <ul class="text-white font-bold h-full mt-10">
-              <li class="-rotate-90">8</li>
-              <li class="-rotate-90">9</li>
-              <li class="-rotate-90">s</li>
-              <li class="-rotate-90">w</li>
-              <li class="-rotate-90">o</li>
-              <li class="-rotate-90">d</li>
-              <li class="-rotate-90">n</li>
-              <li class="-rotate-90">i</li>
-              <li class="-rotate-90">w</li>
-            </ul>
+      <section class="menuDesplegable hidden absolute w-40 h-full max-h-screen left-0 items-end">
+        <div class="max-w-max w-1/4 h-1/2 mb-10">
+          <div class="bg-blue-600 w-full h-full flex items-end justify-center">
+            <p
+              style="margin-bottom: 64px; letter-spacing: 4px"
+              class="flex items-center -rotate-90 font-bold text-white tracking-widest"
+            >
+              Windows98
+            </p>
           </div>
+        </div>
+
+        <!--<ul class="text-white font-bold relative w-full h-full flex flex-col justify-end">
+              <li class="">8</li>
+              <li class="">9</li>
+              <li class="">s</li>
+              <li class="">w</li>
+              <li class="">o</li>
+              <li class="">d</li>
+              <li class="">n</li>
+              <li class="">i</li>
+              <li class="">w</li>
+            </ul>
+          </div>-->
+        <div class="bg-gray-200 h-1/2 w-full flex flex-row mb-10">
           <div class="flex justify-end items-end w-full">
-            <button class="btnApagar text-left bg-gray-200 w-full">
-              Apagar
+            <button class="btnApagar text-left bg-gray-200 w-full hover:bg-blue-600 hover:text-white flex gap-x-2 px-1 py-2">
+              <img src="src/iconos/monitor_windows.ico" alt="icono monitor">
+              <p>Apagar</p>
             </button>
           </div>
         </div>
@@ -248,9 +262,12 @@
       <div class="hidden" id="about">
         <div>Sobre mi:</div>
         <div>
-          Hola! mi nombre es <span>Sebastian Oliveto</span>
-          Me apasiona la programación y hacer que las cosas funcionen. Busco
-          desarrollar mi carrera como programador.
+          "Hola, mi nombre es Sebastián Oliveto, tengo 30 años y soy
+          desarrollador web. Actualmente, estoy estudiando la carrera de
+          Licenciatura en Sistemas con la vista puesta en desarrollar mi carrera
+          en el rubro de IT. Cuento con conocimientos full-stack y he adquirido
+          experiencia en diversas tecnologías, las cuales puedes consultar con
+          el comando --> 'skills'."
         </div>
       </div>
 
@@ -341,8 +358,8 @@
         Encender
       </button>
     </section>
-    <script  src="./src/scripts/enventoMenu.js"></script>
-    <script  src="./src/scripts/drag.js"></script>
-    <script  src="./src/scripts/ventanaGenerica.js"></script>
+    <script src="./src/scripts/enventoMenu.js"></script>
+    <script src="./src/scripts/drag.js"></script>
+    <script src="./src/scripts/ventanaGenerica.js"></script>
   </body>
 </html>
