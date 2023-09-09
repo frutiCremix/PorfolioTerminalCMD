@@ -153,9 +153,10 @@ const cv=[
     texto: "CV.pdf",
   },
 ]
-
+//iconos
 const arrVentanas = document.querySelectorAll(".ventanaGenerica");
 const vistaVentanas = document.querySelector(".vistaVentanas");
+const visorVetanasFooter=document.querySelector("#visorVentanasFooter");
 
 arrVentanas.forEach((e) =>
   e.addEventListener("dblclick", (event) => {
@@ -163,23 +164,25 @@ arrVentanas.forEach((e) =>
     switch (event.target.name) {
       //crear un json y pasarlo como parametro
       case "proyectos":
-        crearVentana(proyectos);
+        crearVentana(proyectos,"proyectos","src/imagenes/011-html-5.png");
         break;
       case "gitHub":
-        crearVentana(profolio);
+        crearVentana(profolio,"gitHub","src/imagenes/008-github.png");
         break;
       case "tecnologias":
-        crearVentana(tecnologias);
+        crearVentana(tecnologias,"tecnologias","src/imagenes/009-js.png");
         break;
       case "CV":
-        crearVentana(cv);
+        crearVentana(cv,"Curriculum","src/imagenes/icons8-pdf-48.png");
         break;
     }
   })
 );
 
-function crearVentana(obj) {
+function crearVentana(obj,titulo,icono) {
   let r = Math.floor(Math.random() * (100 - 50 + 1)) + 50;
+
+  //cremos ventana principal
   const div = document.createElement("div");
   div.style.width = "550px"; // Ancho de la ventana
   div.style.height = "350px"; // Altura de la ventana
@@ -195,8 +198,11 @@ function crearVentana(obj) {
   div.style.overflow="hidden";
   div.innerHTML = `
             <div class="w-full h-10 bg-blue-600 flex justify-between items-center font-bold">
-                <h2 class="text-white">ventana generica</h2>
+              <h2 class="text-white">${titulo}</h2>
+              <div class="flex flex-end h-full">
+                <button class="btnMinimizar bg-gray-200 px-1 text-black border-gray-600 border-2">-</button>
                 <button class="btnCierre bg-gray-200 px-1 text-black border-gray-600 border-2">X</button>
+              </div>
             </div>
             <div class="w-full h-auto bg-gray-300 border-b-2">
             <div class="">    
@@ -274,15 +280,48 @@ function crearVentana(obj) {
         </div>`;
 
   const btnCierre = div.querySelector(".btnCierre"); // Selección del botón dentro del div
+  const btnMinimizar=div.querySelector(".btnMinimizar");
+
+  
+  const btnFotter = document.createElement("btn");
+  btnFotter.style.display="flex";
+  btnFotter.style.flexDirection="row";
+  btnFotter.style.alignItems="center";
+  btnFotter.style.justifyContent="center";
+  btnFotter.style.border="2px solid #000";
+  btnFotter.style.borderTop="1px solid #fff";
+  btnFotter.style.borderLeft="1px solid #fff";
+  btnFotter.style.minWidth="60px";
+  btnFotter.style.height="100%";
+  btnFotter.innerHTML=`<img style="width:25%;height:auto;" src=${icono}><p>${titulo}</p>`;
+  //hover:shadow-inner2-hover hover:border-b-white hover:border-r-white h-full w-20"
+
   btnCierre.addEventListener("click", (e) => {
-    vistaVentanas.removeChild(div); //lo eliminamos
+    vistaVentanas.removeChild(div);
+    visorVetanasFooter.removeChild(btnFotter); //lo eliminamos
     //div.style.display = 'none'; // Oculta la ventana al hacer clic en el botón de cierre
+  });
+  btnMinimizar.addEventListener("click",(e)=>{
+    div.style.display="none";
+  });
+  
 
 
+  btnFotter.addEventListener("click",(e)=>{
+ 
+   
+    if(div.style.display=="none"){
+      div.style.display="flex";
+    }else{
+      div.style.display="none";
     
+    }
   });
 
   vistaVentanas.appendChild(div);
+  //falta agregar la ventana al footer con display none para minimizar
+  visorVetanasFooter.appendChild(btnFotter);
+
 }
 //temporal para crear los estilos y luego se borra
 /*document.addEventListener("DOMContentLoaded", () => {
