@@ -288,11 +288,12 @@ function crearVentana(obj,titulo,icono) {
   btnFotter.style.flexDirection="row";
   btnFotter.style.alignItems="center";
   btnFotter.style.justifyContent="center";
-  btnFotter.style.border="2px solid #000";
-  btnFotter.style.borderTop="1px solid #fff";
-  btnFotter.style.borderLeft="1px solid #fff";
+  btnFotter.style.border="2px solid #fff";
+  btnFotter.style.borderTop="1px solid #000";
+  btnFotter.style.borderLeft="1px solid #000";
   btnFotter.style.minWidth="60px";
   btnFotter.style.height="100%";
+  btnFotter.classList.add("hover:bg-blue-700");
   btnFotter.innerHTML=`<img style="width:25%;height:auto;" src=${icono}><p>${titulo}</p>`;
   //hover:shadow-inner2-hover hover:border-b-white hover:border-r-white h-full w-20"
 
@@ -305,16 +306,18 @@ function crearVentana(obj,titulo,icono) {
     div.style.display="none";
   });
   
-
-
   btnFotter.addEventListener("click",(e)=>{
  
-   
     if(div.style.display=="none"){
       div.style.display="flex";
+      btnFotter.style.border = "1px solid #fff"; // Cambia el color de fondo al pasar el mouse
+    btnFotter.style.borderLeft = "2px solid #000";
+    btnFotter.style.borderTop = "2px solid #000";  
     }else{
       div.style.display="none";
-    
+      btnFotter.style.border = "2px solid #fff"; // Cambia el color de fondo al pasar el mouse
+    btnFotter.style.borderRight = "2px solid #000";
+    btnFotter.style.borderBottom = "2px solid #000";
     }
   });
 
