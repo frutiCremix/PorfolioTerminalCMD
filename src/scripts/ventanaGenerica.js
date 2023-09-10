@@ -293,8 +293,9 @@ function crearVentana(obj,titulo,icono) {
   btnFotter.style.borderLeft="1px solid #000";
   btnFotter.style.minWidth="60px";
   btnFotter.style.height="100%";
-  btnFotter.classList.add("hover:bg-blue-700");
-  btnFotter.innerHTML=`<img style="width:25%;height:auto;" src=${icono}><p>${titulo}</p>`;
+  btnFotter.style.padding="4px";
+  btnFotter.style.paddingLeft="1px";
+  btnFotter.innerHTML=`<img style="width:24px;height:auto;" src=${icono}><p>${titulo}</p>`;
   //hover:shadow-inner2-hover hover:border-b-white hover:border-r-white h-full w-20"
 
   btnCierre.addEventListener("click", (e) => {
