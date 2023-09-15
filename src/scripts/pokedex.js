@@ -1,4 +1,4 @@
-const icono = document.querySelector(".pokedex");
+const icono = document.querySelector(".pokedexApp");
 const contenedor = document.querySelector(".vistaVentanas");
 let ventanaAbierta=false;
 const coloresTipos = {
