@@ -67,7 +67,7 @@ iconoTetris.addEventListener("dblclick", (e) => {
     btnFotter.style.height = "100%";
     btnFotter.style.padding = "4px";
     btnFotter.style.paddingLeft = "1px";
-    btnFotter.innerHTML = `<img style="width:24px;height:auto;" src="./src/imagenes/009-js.png"><p>Tetris</p>`;
+    btnFotter.innerHTML = `<img style="width:24px;height:auto;" src="./src/imagenes/tetris-64.png"><p>Tetris</p>`;
     //hover:shadow-inner2-hover hover:border-b-white hover:border-r-white h-full w-20"
   
     btnCierre.addEventListener("click", (e) => {
